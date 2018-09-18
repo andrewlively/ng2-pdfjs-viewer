@@ -112,9 +112,9 @@ export class PdfJsViewerComponent {
 
     let viewerUrl;
     if (this.pdfJsFolder) {
-      viewerUrl = `${this.pdfJsFolder}/web/viewer.html`;
+      viewerUrl = `${this.pdfJsFolder}/mobile/viewer.html`;
     } else {
-      viewerUrl = `assets/pdfjs/web/viewer.html`;
+      viewerUrl = `assets/pdfjs/mobile/viewer.html`;
     }
 
     //console.log("__dirname" + __dirname);
