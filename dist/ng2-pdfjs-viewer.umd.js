@@ -69,10 +69,6 @@ var PdfJsViewerComponent = /** @class */ (function () {
         // if (this.viewerTab) {
         //   console.log(`Status of window - ${this.viewerTab.closed}`);
         // }
-        // console.log(`Tab is - ${this.viewerTab}`);
-        // if (this.viewerTab) {
-        //   console.log(`Status of window - ${this.viewerTab.closed}`);
-        // }
         if (this.externalWindow && (typeof this.viewerTab === 'undefined' || this.viewerTab.closed)) {
             this.viewerTab = window.open('', '_blank');
             if (this.viewerTab == null) {
@@ -84,9 +80,6 @@ var PdfJsViewerComponent = /** @class */ (function () {
             }
         }
         var /** @type {?} */ fileUrl;
-        //if (typeof this.src === "string") {
-        //  fileUrl = this.src;
-        //}
         //if (typeof this.src === "string") {
         //  fileUrl = this.src;
         //}
@@ -102,10 +95,10 @@ var PdfJsViewerComponent = /** @class */ (function () {
         }
         var /** @type {?} */ viewerUrl;
         if (this.pdfJsFolder) {
-            viewerUrl = this.pdfJsFolder + "/web/viewer.html";
+            viewerUrl = this.pdfJsFolder + "/mobile/viewer.html";
         }
         else {
-            viewerUrl = "assets/pdfjs/web/viewer.html";
+            viewerUrl = "assets/pdfjs/mobile/viewer.html";
         }
         //console.log("__dirname" + __dirname);
         //console.log("__dirname" + path.join(__dirname, 'my/public'));
@@ -137,7 +130,6 @@ var PdfJsViewerComponent = /** @class */ (function () {
                 },] },
     ];
     /** @nocollapse */
-    PdfJsViewerComponent.ctorParameters = function () { return []; };
     PdfJsViewerComponent.propDecorators = {
         "iframe": [{ type: core.ViewChild, args: ['iframe',] },],
         "pdfJsFolder": [{ type: core.Input },],
@@ -183,8 +175,6 @@ var PdfJsViewerModule = /** @class */ (function () {
                     ]
                 },] },
     ];
-    /** @nocollapse */
-    PdfJsViewerModule.ctorParameters = function () { return []; };
     return PdfJsViewerModule;
 }());
 
